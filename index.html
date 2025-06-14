@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRONET - Vente de Fruits & Légumes</title>
+    <meta name="description" content="PRONET - Vente de Fruits & Légumes, offrant des produits locaux et biologiques.">
+    <meta name="keywords" content="PRONET, fruits, légumes, vente, produits locaux, agriculture biologique, légumes français">
+    <meta name="author" content="Anas Labzar | 'principeanas80@gmail.com'">
+    <style>
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; position: relative; }
+        a { color: #2d7a2d; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        .container { width: 90%; max-width: 1200px; margin: auto; }
+        header, section, footer { padding: 2rem 0; }
+        h1, h2, h3 { margin-bottom: 1rem; }
+
+        /* Top Bar */
+        .top-bar { background: #fff; border-bottom: 1px solid #eee; font-size: 0.9rem; padding: .5em 0; }
+        .top-bar .container { display: flex; justify-content: flex-end; gap: 2rem; }
+        .top-bar a { color: #555; }
+
+        /* Header */
+        .header-main { background: #2d7a2d; color: #fff; }
+        .header-main .container { display: flex; align-items: center; }
+        nav ul { list-style: none; display: flex; gap: 1rem; }
+        nav a { color: #fff; font-weight: bold; }
+        #hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+        #hamburger span { width: 25px; height: 3px; background: #fff; }
+        .navbar { display: flex; position: absolute;
+            right: 10%; }
+
+        /* Hero */
+        .hero { position: relative; text-align: center; color: #fff; }
+        .hero img { height: 60vh; object-fit: cover; width: 100%; }
+        .hero .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); }
+        .hero .text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        .hero h2, .hero p { color: #fff; text-shadow: 1px 1px 4px rgba(0,0,0,0.6); }
+        .hero p { max-width: 700px; margin: 1rem auto; }
+        .hero button { font-size: 18px; padding: 1em; border-radius: 20px; border: 3px solid #2d7a2d; color: #2d7a2d; padding: .75rem 1.5rem; background-color: rgba(255, 255, 255, 0.826); width: fit-content;  display: flex; margin: 0 auto;}
+
+        /* Services */
+        .services { background: #f5f5f5; }
+        .services .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; }
+        .service-item { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
+        .service-item img { border-radius: 4px; margin-bottom: 1rem; width: 8em; display: flex; margin: 0 auto; }
+
+        /* Presentation */
+        #presentation ul { list-style-type: disc; margin-left: 1.5rem; }
+
+        /* Contact */
+        .contact-form { background: #eaf5ea; padding: 2rem; border-radius: 8px; max-width: 600px; margin: auto; }
+        .contact-form label { display: block; margin-bottom: .5rem; font-weight: bold; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: .5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 4px; }
+        .contact-form button { background: #2d7a2d; color: #fff; padding: .75rem 1.5rem; border: none; border-radius: 4px; cursor: pointer; }
+
+        /* Back to Top */
+        #back-top { position: fixed; bottom: 30px; right: 30px; display: none; background: #2d7a2d; color: #fff; padding: 10px; border-radius: 50%; cursor: pointer; text-align: center; width: 40px; height: 40px; }
+
+        /* Footer */
+        footer { background: #333; color: #fff; text-align: center; }
+        footer p { margin: .5rem 0; }
+
+        @media (max-width: 768px) {
+            .top-bar .container { flex-direction: row; align-items: flex-end; padding: 0.5rem 0; justify-content: center; }
+            .header-main .container { flex-direction: row;  }
+            nav ul { display: none; flex-direction: row; gap: 1rem; background: #2d7a2d; width: 100%; padding: 1rem; }
+            nav.open ul { display: flex; }
+            #hamburger { display: flex;         right: 2em;
+                position: absolute; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <a href="tel:+33123456789">📞 +33 1 23 45 67 89</a>
+            <a href="mailto:contact@greensfrancais.fr">✉️ contact@pronet.com</a>
+        </div>
+    </div>
+
+    <!-- Header Principal -->
+    <header class="header-main">
+        <div class="container">
+            <h1 style="margin-bottom: 0;">PRONET</h1>
+            <div id="hamburger"> <span></span> <span></span> <span></span> </div>
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#presentation">Notre Métier</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 0;">
+        <img src="images/slide1.jpg" style="background-size: cover;" alt="Fruits et légumes frais">
+        <div class="overlay"></div>
+        <div class="text">
+            <h2>Bienvenue chez PRONET</h2>
+            <p>Nous rapprochons les consommateurs des producteurs locaux pour une alimentation saine, durable et responsable.</p>
+            <div class="row" style="display: flex; flex-direction: column; text-align: center;">
+                <span style="margin-top: 2em;">Appelez-nous !</span>
+                <button>📞 +33 1 23 45 67 89</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="grid">
+                <div class="service-item">
+                    <img src="images/healthy-food.gif" alt="Vente de fruits">
+                    <h3>Vente de Fruits & Légumes</h3>
+                    <p>Production locale, de saison et biologique.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/farmer.gif" alt="Petits agriculteurs">
+                    <h3>Partenariat Agriculteurs</h3>
+                    <p>Soutien aux petites exploitations familiales engagées.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/fluctuation.gif" alt="Marché">
+                    <h3>Livraison & Marchés locaux</h3>
+                    <p>Points de vente directs et livraisons en circuits courts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentation -->
+    <section id="presentation">
+        <div class="container">
+            <h2>Le Métier de Maraîcher</h2>
+            <p>Le maraîcher cultive, entretient et récolte fruits et légumes. Artisan de la terre, il sélectionne variétés, gère l’irrigation et préserve le sol.</p>
+            <ul>
+                <li>Gestion des cultures</li>
+                <li>Sélection variétale</li>
+                <li>Respect du cycle naturel</li>
+                <li>Engagement durable</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contactez-Nous</h2>
+            <div class="flex" style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                <a href="tel:+33123456789">📞 +33 1 23 45 67 89</a>
+                <a href="mailto:contact@greensfrancais.fr">✉️ contact@pronet.com</a>
+            </div>
+            <form class="contact-form" id="form-contact">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Back to Top -->
+    <div id="back-top">↑</div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 PRONET. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.getElementById('navbar');
+        hamburger.addEventListener('click', () => navbar.classList.toggle('open'));
+
+        // Form Submission
+        document.getElementById('form-contact').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = this.name.value.trim();
+            const email = this.email.value.trim();
+            const message = this.message.value.trim();
+            if (name && email && message) {
+                alert(`Merci ${name}, votre message a été envoyé !`);
+                this.reset();
+            } else {
+                alert('Veuillez compléter tous les champs.');
+            }
+        });
+
+        // Back to Top
+        const backTop = document.getElementById('back-top');
+        window.addEventListener('scroll', () => {
+            backTop.style.display = window.scrollY > 500 ? 'block' : 'none';
+        });
+        backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+</body>
+</html>
