@@ -258,6 +258,10 @@
         }
 
         @media (max-width: 768px) {
+            .number-first {
+                flex-direction: column !important;
+                align-items: center;
+            }
             .top-bar .container {
                 flex-direction: row;
                 align-items: flex-end;
@@ -326,7 +330,7 @@
                 responsable.</p>
             <div class="row" style="display: flex; flex-direction: column; text-align: center;">
                 <span style="margin-top: 2em;">Appelez-nous !</span>
-                <div class="row" style="display: flex; flex-direction: row; gap: .5em;">
+                <div class="row number-first" style="display: flex; flex-direction: row; gap: .5em;">
                     <button> <a href="tel:+33778781628">📞 +33 7 78 78 16 28</a></button>
                     <button> <a href="tel:+33626665943">📞 +33 6 26 66 59 43</a></button>
                 </div>
